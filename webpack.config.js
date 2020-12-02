@@ -1,26 +1,23 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const miniCss = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: {
-    index: "./src/index.js",
-    print: "./src/print.js",
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
+  module: {
+    rules: [
+      {
+        test: /\.(s*)css$/,
+        use: [miniCss.loader, "css-loader", "sass-loader"],
+      },
+    ],
   },
   plugins: [
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new HtmlWebpackPlugin({
-      title: "Development",
+    new miniCss({
+      filename: "style.css",
     }),
   ],
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
-  },
 };
