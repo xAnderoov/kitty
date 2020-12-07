@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector(".header"),c=document.querySelector(".header__menu--open"),r=document.querySelector(".header__menu--close");c.addEventListener("click",(()=>{e.classList.add("header--fullscreen")})),r.addEventListener("click",(()=>{e.classList.remove("header--fullscreen")}))})();
