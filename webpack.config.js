@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.(s*)css$/,
-        use: [miniCss.loader, "css-loader", "sass-loader"],
+        use: [miniCss.loader, "css-loader?url=false", "sass-loader"],
       },
     ],
   },

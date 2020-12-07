@@ -12,7 +12,9 @@
 </head>
 <body>
   <header class="header">
-    <img class="site-logo" src="./images/logo.svg">
+    <a class="site-logo" href="#">
+      <img src="./images/logo.svg">
+    </a>
     <div class="controls">
       <button type="button" class="controls__open">open</button>
       <button type="button" class="controls__close">close</button>
@@ -81,17 +83,29 @@
     </div>
   </section>
   <footer class="footer">
-    <img class="site-logo" src="./images/logo.svg">
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">Почему мы?</li>
-        <li class="nav__item">Номера</li>
-        <li class="nav__item">Отзывы</li>
-        <li class="nav__item">Контакты</li>
-      </ul>
-    </nav>
+    <div class="footer__top">
+      <a class="site-logo" href="#">
+        <img src="./images/logo.svg">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">Почему мы?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Номера</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Как нас найти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <span>2019 Все права защищены</span>
+      <span class="footer__copyright"> 2019 Все права защищены</span>
       <span>Политика конфиденциальности</span>
     </div>
   </footer>
