@@ -1,3 +1,21 @@
+@mixin only-mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -48,6 +66,15 @@ button {
   background-color: transparent;
 }
 
+.phone {
+  margin-bottom: 21px;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.185;
+}
+
 .site-logo {
   display: block;
   width: 46px;
@@ -74,7 +101,7 @@ button {
     }
   }
 
-  @media (min-width: 1366px) {
+  @include desktop {
     margin-left: 198px;
     margin-right: 198px;
   }
@@ -98,6 +125,21 @@ button {
     box-sizing: border-box;
     min-height: 62px;
     padding: 12px 15px;
+
+    .site-nav__wrapper {
+      margin-bottom: 32px;
+    }
+
+    .site-nav__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      font-family: "Rubik", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.185;
+    }
   }
 
   .phone,
@@ -108,17 +150,22 @@ button {
   }
 
   &--fullscreen {
+    min-height: 100vh;
+
     background-color: #fac663;
 
     .site-logo {
-      margin-bottom: 50px;
+      margin-bottom: 46px;
     }
 
     .phone,
-    .social,
     .header__menu--close,
     .site-nav__wrapper {
       display: block;
+    }
+
+    .social {
+      display: flex;
     }
 
     .header__menu--open {
