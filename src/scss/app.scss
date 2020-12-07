@@ -16,6 +16,22 @@
   }
 }
 
+.container {
+  padding: 0 4.69%;
+
+  @include tablet {
+    padding: 0 5.86%;
+  }
+
+  @include desktop {
+    padding: 0 7.17%;
+
+    &--lg {
+      padding: 0 14.5%;
+    }
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -82,28 +98,24 @@ button {
   font-size: 0;
 }
 
-@media (min-width: 768px) {
+@include tablet {
   .site-logo {
     width: 63px;
   }
 }
 
 .site-nav {
-  @media (min-width: 768px) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin: 12px 45px 11px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 
     .site-nav__item:not(:last-child) {
       margin-right: 26px;
     }
-  }
-
-  @include desktop {
-    margin-left: 198px;
-    margin-right: 198px;
   }
 }
 
@@ -121,10 +133,11 @@ button {
 
   background-color: #fffefd;
 
-  @media (max-width: 767px) {
+  @include only-mobile {
     box-sizing: border-box;
     min-height: 62px;
-    padding: 12px 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
     .site-nav__wrapper {
       margin-bottom: 32px;
@@ -173,7 +186,7 @@ button {
     }
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     .site-nav__wrapper {
       display: block;
     }
@@ -207,7 +220,7 @@ button {
     background-repeat: no-repeat;
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }
@@ -216,12 +229,12 @@ button {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @include tablet {
     flex-direction: row;
     min-height: 522px;
   }
 
-  @media (min-width: 1366px) {
+  @include desktop {
     min-height: 580px;
   }
 
@@ -231,13 +244,13 @@ button {
     font-size: 28px;
     line-height: 1.185;
 
-    @media (min-width: 768px) {
+    @include tablet {
       margin-bottom: 27px;
 
       font-size: 36px;
     }
 
-    @media (min-width: 1366px) {
+    @include desktop {
       margin-bottom: 38px;
     }
   }
@@ -248,19 +261,22 @@ button {
 }
 
 .address__wrapper {
-  padding: 34px 15px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+
   background-color: #fac663;
 
-  @media (min-width: 768px) {
+  @include tablet {
     box-sizing: border-box;
     min-width: 48%;
-    padding: 52px 45px;
+    padding-top: 52px;
+    padding-bottom: 52px;
   }
 
-  @media (min-width: 1366px) {
+  @include desktop {
     min-width: 41.6%;
     padding: 62px 0;
-    padding-left: 198px;
+    padding-left: 14.5%;
   }
 }
 
@@ -270,7 +286,7 @@ button {
   font-size: 15px;
   line-height: 18px;
 
-  @media (min-width: 1366px) {
+  @include desktop {
     margin-bottom: 29px;
   }
 
@@ -307,7 +323,7 @@ button {
   width: 100vw;
   height: 300px;
 
-  @media (min-width: 768px) {
+  @include tablet {
     flex-grow: 1;
     height: auto;
   }
@@ -322,7 +338,7 @@ button {
     margin-bottom: 21px;
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     margin: 0;
 
     .site-logo {
@@ -332,8 +348,8 @@ button {
 }
 
 .site-nav--footer {
-  @media (max-width: 767px) {
-    margin: 0 15px 26px;
+  @include only-mobile {
+    margin-bottom: 26px;
 
     .site-nav__list {
       margin-top: -13px;
@@ -354,7 +370,7 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
-  padding: 14px 15px 0;
+  padding-top: 14px;
 
   font-size: 12px;
   line-height: 1.2;
@@ -362,13 +378,10 @@ button {
 
   border-top: 1px solid #efefef;
 
-  @media (min-width: 768px) {
-    padding: 18px 45px;
-  }
-
-  @media (min-width: 1366px) {
-    padding-left: 198px;
-    padding-right: 198px;
+  @include tablet {
+    margin-top: -1px;
+    padding-top: 18px;
+    padding-bottom: 17px;
   }
 }
 
@@ -379,9 +392,4 @@ button {
   background-position: 0 2px;
   background-size: 9px 9px;
   background-repeat: no-repeat;
-}
-
-.header,
-.address {
-  // display: none;
 }
