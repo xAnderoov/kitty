@@ -1,6 +1,6 @@
-/*!************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
-  \************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/app.scss ***!
+  \********************************************************************************************************************************************************************/
 .container {
   padding: 0 4.69%; }
   @media (min-width: 768px) {
@@ -131,7 +131,7 @@ button {
     right: 15px;
     width: 23px;
     height: 21px;
-    background-image: url(menu.svg);
+    background-image: url("../images/menu.svg");
     background-size: 24px 20px;
     background-repeat: no-repeat; }
   .header__menu--close {
@@ -139,7 +139,7 @@ button {
     right: 25px;
     width: 14px;
     height: 14px;
-    background-image: url(close.svg);
+    background-image: url("../images/close.svg");
     background-size: 14px;
     background-repeat: no-repeat; }
   @media (min-width: 768px) {
@@ -261,7 +261,7 @@ button {
 
 .footer__copyright {
   padding-left: 14px;
-  background-image: url(copyright.svg);
+  background-image: url("../images/copyright.svg");
   background-position: 0 2px;
   background-size: 9px 9px;
   background-repeat: no-repeat; }
