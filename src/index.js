@@ -14,3 +14,7 @@ close.addEventListener("click", () => {
   header.classList.remove("header--fullscreen");
   body.classList.remove("overflow-hidden");
 });
+
+window.addEventListener('resize', () => {
+  setTimeout(() => {window.location.reload()}, 300);
+});
