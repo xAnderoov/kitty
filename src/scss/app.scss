@@ -241,17 +241,25 @@ button {
 }
 
 .banner {
+  position: relative;
+  box-sizing: border-box;
   width: 100%;
   height: 457px;
 
-  background-color: orange;
-  
+  overflow: hidden;
+
+  background-image: url("images/cat-sm.jpg");
+  background-size: cover;
+  background-position: center bottom;
+
   @include tablet {
     height: 868px;
+    background-image: url("images/cat-md.jpg");
   }
-  
+
   @include desktop {
     height: 504px;
+    background-image: url("images/cat-lg.jpg");
   }
 }
 
@@ -329,7 +337,7 @@ button {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px 30px;
     }
-  }  
+  }
 
   li {
     position: relative;

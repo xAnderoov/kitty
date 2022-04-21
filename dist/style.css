@@ -154,15 +154,22 @@ button {
       display: none; } }
 
 .banner {
+  position: relative;
+  box-sizing: border-box;
   width: 100%;
   height: 457px;
-  background-color: orange; }
+  overflow: hidden;
+  background-image: url("images/cat-sm.jpg");
+  background-size: cover;
+  background-position: center bottom; }
   @media (min-width: 768px) {
     .banner {
-      height: 868px; } }
+      height: 868px;
+      background-image: url("images/cat-md.jpg"); } }
   @media (min-width: 1366px) {
     .banner {
-      height: 504px; } }
+      height: 504px;
+      background-image: url("images/cat-lg.jpg"); } }
 
 .advantages {
   position: relative;
