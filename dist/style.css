@@ -171,49 +171,57 @@ button {
   padding-bottom: 70px; }
   @media (min-width: 768px) {
     .advantages {
-      padding-top: 120px;
+      padding-top: 112px;
       padding-bottom: 120px; } }
   @media (min-width: 1366px) {
     .advantages {
-      padding-top: 140px;
+      padding-top: 132px;
       padding-bottom: 140px; } }
   .advantages::before {
     content: '';
     position: absolute;
-    top: 37px;
-    right: -44px;
+    top: 49px;
+    right: -29px;
     display: block;
-    width: 116px;
-    height: 99px;
+    width: 114px;
+    height: 125px;
     background-image: url("images/paw.png");
     background-repeat: no-repeat;
     background-size: contain; }
     @media (min-width: 768px) {
       .advantages::before {
-        top: 14px;
-        right: -100px;
+        top: 18px;
+        right: -89px;
         width: 300px;
-        height: 257px; } }
+        height: 283px; } }
     @media (min-width: 1366px) {
       .advantages::before {
-        top: 4px;
-        right: -73px;
-        width: 300px;
-        height: 257px; } }
+        top: 7px;
+        right: -59px;
+        width: 359px;
+        height: 366px; } }
   .advantages h2 {
     margin-bottom: 33px;
     text-align: center; }
     @media (min-width: 768px) {
       .advantages h2 {
-        margin-bottom: 60px; } }
+        margin-bottom: 50px; } }
     @media (min-width: 1366px) {
       .advantages h2 {
-        margin-bottom: 70px; } }
+        margin-bottom: 60px; } }
   .advantages ul {
     display: grid;
     gap: 30px; }
+    @media (min-width: 768px) {
+      .advantages ul {
+        grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1366px) {
+      .advantages ul {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px 30px; } }
   .advantages li {
     position: relative;
+    box-sizing: border-box;
     padding: 25px;
     padding-right: 15px;
     padding-bottom: 20px;
@@ -221,13 +229,33 @@ button {
     box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
     border-radius: 8px;
     line-height: 1.4; }
+    @media (min-width: 768px) {
+      .advantages li {
+        min-height: 285px; } }
+    @media (min-width: 1366px) {
+      .advantages li {
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        min-height: 321px; } }
   .advantages h3 {
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: 500; }
+    @media (min-width: 768px) {
+      .advantages h3 {
+        font-size: 20px;
+        margin-bottom: 9px; } }
+    @media (min-width: 1366px) {
+      .advantages h3 {
+        font-size: 22px;
+        margin-bottom: 8px; } }
   .advantages p {
     margin: 0;
     font-size: 15px; }
+    @media (min-width: 1366px) {
+      .advantages p {
+        font-size: 16px; } }
 
 .advantages__icon {
   display: flex;
@@ -238,8 +266,16 @@ button {
   margin-bottom: 25px;
   background-color: #fac663;
   border-radius: 50%; }
-  .advantages__icon span {
-    background-image: url("images/icon-1"); }
+  @media (min-width: 768px) {
+    .advantages__icon {
+      width: 75px;
+      height: 75px;
+      margin-bottom: 23px; } }
+  @media (min-width: 1366px) {
+    .advantages__icon {
+      width: 91px;
+      height: 91px;
+      margin-bottom: 28px; } }
 
 .address {
   display: flex;

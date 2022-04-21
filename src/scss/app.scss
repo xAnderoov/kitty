@@ -263,43 +263,43 @@ button {
   padding-bottom: 70px;
 
   @include tablet {
-    padding-top: 120px;
+    padding-top: 112px;
     padding-bottom: 120px;
   }
 
   @include desktop {
-    padding-top: 140px;
+    padding-top: 132px;
     padding-bottom: 140px;
   }
 
   &::before {
     content: '';
     position: absolute;
-    top: 37px;
-    right: -44px;
+    top: 49px;
+    right: -29px;
 
     display: block;
-    width: 116px;
-    height: 99px;
+    width: 114px;
+    height: 125px;
 
     background-image: url("images/paw.png");
     background-repeat: no-repeat;
     background-size: contain;
 
     @include tablet {
-      top: 14px;
-      right: -100px;
+      top: 18px;
+      right: -89px;
 
       width: 300px;
-      height: 257px;
+      height: 283px;
     }
 
     @include desktop {
-      top: 4px;
-      right: -73px;
+      top: 7px;
+      right: -59px;
 
-      width: 300px;
-      height: 257px;
+      width: 359px;
+      height: 366px;
     }
   }
 
@@ -309,21 +309,32 @@ button {
     text-align: center;
 
     @include tablet {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     @include desktop {
-      margin-bottom: 70px;
+      margin-bottom: 60px;
     }
   }
 
   ul {
     display: grid;
     gap: 30px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px 30px;
+    }
   }  
 
   li {
     position: relative;
+    box-sizing: border-box;
+
     padding: 25px;
     padding-right: 15px;
     padding-bottom: 20px;
@@ -333,6 +344,17 @@ button {
     border-radius: 8px;
 
     line-height: 1.4;
+
+    @include tablet {
+      min-height: 285px;
+    }
+
+    @include desktop {
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-left: 30px;
+      min-height: 321px;
+    }
   }
 
   h3 {
@@ -340,12 +362,26 @@ button {
 
     font-size: 18px;
     font-weight: 500;
+
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    @include desktop {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
   }
 
   p {
     margin: 0;
 
     font-size: 15px;
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 }
 
@@ -360,8 +396,16 @@ button {
   background-color: #fac663;
   border-radius: 50%;
 
-  span {
-    background-image: url("images/icon-1");
+  @include tablet {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 23px;
+  }
+
+  @include desktop {
+    width: 91px;
+    height: 91px;
+    margin-bottom: 28px;
   }
 }
 
