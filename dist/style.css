@@ -3,37 +3,37 @@
   \********************************************************************************************************************************************************************/
 @font-face {
   font-family: "Rubik";
-  src: url(fonts/rubik-400.woff2);
+  src: url("fonts/rubik-400.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Rubik";
-  src: url(fonts/rubik-500.woff2);
+  src: url("fonts/rubik-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: "Rubik";
-  src: url(fonts/rubik-700.woff2);
+  src: url("fonts/rubik-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: "Lato";
-  src: url(fonts/lato-300.woff2);
+  src: url("fonts/lato-300.woff2") format("woff2");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: "Lato";
-  src: url(fonts/lato-400.woff2);
+  src: url("fonts/lato-400.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Lato";
-  src: url(fonts/lato-700.woff2);
+  src: url("fonts/lato-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal; }
 
