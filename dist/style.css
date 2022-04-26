@@ -22,6 +22,24 @@
 .overflow-hidden {
   overflow: hidden; }
 
+.button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 7px;
+  padding-left: 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #fffefd;
+  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1); }
+  .button--orange {
+    background-color: #ff7236; }
+    .button--orange path:first-child {
+      fill: #fffefd; }
+    .button--orange path:not(:first-child) {
+      fill: #ff7236; }
+
 body {
   margin: 0;
   padding: 0;
@@ -180,11 +198,11 @@ button {
       min-height: 504px;
       padding-top: 150px;
       background-image: url("images/cat-lg.jpg"); } }
-  .banner span {
+  .banner > span {
     margin-bottom: -1px;
     font-size: 12px; }
     @media (min-width: 768px) {
-      .banner span {
+      .banner > span {
         margin-bottom: -3px;
         font-size: 14px; } }
   .banner h1 {
@@ -204,6 +222,9 @@ button {
       .banner p {
         margin-bottom: 35px;
         font-size: 20px; } }
+  .banner .button {
+    width: 206px;
+    justify-content: space-between; }
 
 .advantages {
   position: relative;
