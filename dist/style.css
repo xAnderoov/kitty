@@ -395,10 +395,32 @@ button {
       margin-bottom: 28px; } }
 
 .rooms {
+  position: relative;
   margin-bottom: 70px; }
   @media (min-width: 1366px) {
     .rooms {
       padding: 0 12.3%; } }
+  .rooms::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 38px;
+    left: 0;
+    width: 150px;
+    height: 46px;
+    background-image: url("images/fish.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15; }
+    @media (min-width: 768px) {
+      .rooms::before {
+        width: 339px;
+        height: 104.76px; } }
+    @media (min-width: 1366px) {
+      .rooms::before {
+        width: 484px;
+        height: 148px;
+        top: 18px; } }
   .rooms h2 {
     margin-bottom: 33px;
     text-align: center; }

@@ -571,10 +571,39 @@ button {
 }
 
 .rooms {
+  position: relative;
   margin-bottom: 70px;
 
   @include desktop {
     padding: 0 12.3%;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    top: 38px;
+    left: 0;
+    width: 150px;
+    height: 46px;
+
+    background-image: url('images/fish.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+
+    @include tablet {
+      width: 339px;
+      height: 104.76px;
+    }
+
+    @include desktop {
+      width: 484px;
+      height: 148px;
+
+      top: 18px;
+    }
   }
 
   h2 {
