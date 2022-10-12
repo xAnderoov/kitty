@@ -692,9 +692,7 @@ button {
 }
 
 .rooms__item {
-  @include tablet {
-    display: flex;
-  }
+  display: none;
 
   picture {
     @include tablet {
@@ -706,7 +704,13 @@ button {
     }
   }
 
+  &--current {
+    display: block;
 
+    @include tablet {
+      display: flex;
+    }
+  }
 }
 
 .rooms__inner {

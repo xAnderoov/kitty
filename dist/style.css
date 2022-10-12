@@ -480,17 +480,19 @@ button {
     .rooms__list {
       margin-bottom: 50px; } }
 
-@media (min-width: 768px) {
-  .rooms__item {
-    display: flex; } }
-
-@media (min-width: 768px) {
-  .rooms__item picture {
-    width: 65.2%; } }
-
-@media (min-width: 1366px) {
-  .rooms__item picture {
-    width: 58.3%; } }
+.rooms__item {
+  display: none; }
+  @media (min-width: 768px) {
+    .rooms__item picture {
+      width: 65.2%; } }
+  @media (min-width: 1366px) {
+    .rooms__item picture {
+      width: 58.3%; } }
+  .rooms__item--current {
+    display: block; }
+    @media (min-width: 768px) {
+      .rooms__item--current {
+        display: flex; } }
 
 .rooms__inner {
   box-sizing: border-box;
